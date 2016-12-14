@@ -77,11 +77,6 @@ object Settings {
     unmanagedResources in Compile <++= (baseDirectory) map { _ =>
       (file("android/assets") ** "*").get
     },
-    forceLinkClasses := Seq("com.badlogic.gdx.scenes.scene2d.ui.*"),
-    skipPngCrush := true,
-    iosInfoPlist <<= (sourceDirectory in Compile){ sd => Some(sd / "Info.plist") },
-    frameworks := Seq("UIKit", "OpenGLES", "QuartzCore", "CoreGraphics", "OpenAL", "AudioToolbox", "AVFoundation"),
-    nativePath <<= (baseDirectory){ bd => Seq(bd / "lib") },
     libraryDependencies ++= Seq(
       "com.badlogicgames.gdx" % "gdx-backend-robovm" % libgdxVersion.value,
       "com.badlogicgames.gdx" % "gdx-platform" % libgdxVersion.value % "natives" classifier "natives-ios"
@@ -174,7 +169,7 @@ object LibgdxBuild extends Build {
     settings = Settings.android
   ).dependsOn(core)
 
-  lazy val ios = RobovmProject(
+  lazy val ios = iOSProject(
     id       = "ios",
     base     = file("ios"),
     settings = Settings.ios
