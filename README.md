@@ -1,6 +1,6 @@
 # libgdx sbt project
 
-Configure and generate a Scala project for [libgdx](http://libgdx.badlogicgames.com/) using [g8](http://github.com/n8han/giter8) and [sbt](http://www.scala-sbt.org/) 0.13.5+.
+Configure and generate a Scala project for [libgdx](http://libgdx.badlogicgames.com/) using [g8](http://github.com/n8han/giter8) and [sbt](http://www.scala-sbt.org/) 1.1.6.
 
 ## Setting up a new project
 
