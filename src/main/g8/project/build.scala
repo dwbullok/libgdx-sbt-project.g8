@@ -24,8 +24,8 @@ object Settings {
     javacOptions ++= Seq(
       "-Xlint",
       "-encoding", "UTF-8",
-      "-source", "1.6",
-      "-target", "1.6"
+      "-source", "1.8",
+      "-target", "1.8"
     ),
     scalacOptions ++= Seq(
       "-Xlint",
@@ -38,7 +38,7 @@ object Settings {
       "-deprecation",
       "-feature",
       "-encoding", "UTF-8",
-      "-target:jvm-1.6"
+      "-target:jvm-1.8"
     ),
     cancelable := true,
     exportJars := true
@@ -46,7 +46,7 @@ object Settings {
 
   lazy val desktop = core ++ Seq(
     libraryDependencies ++= Seq(
-      "net.sf.proguard" % "proguard-base" % "4.11" % "provided",
+      "net.sf.proguard" % "proguard-base" % "6.0.3" % "provided",
       "com.badlogicgames.gdx" % "gdx-backend-lwjgl" % libgdxVersion.value,
       "com.badlogicgames.gdx" % "gdx-platform" % libgdxVersion.value classifier "natives-desktop"
     ),

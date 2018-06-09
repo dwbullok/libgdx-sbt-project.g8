@@ -9,7 +9,7 @@ Consult g8's [readme](http://github.com/n8han/giter8#readme) for more informatio
 
 Then, in your favorite shell, type the command:
 
-    $ g8 ajhager/libgdx-sbt-project
+    $ g8 mishmush/libgdx-sbt-project
 
 After filling in some information about your project, you can start placing your game's source files and assets in core/src/main/scala and android/assets respectively.
 
@@ -38,3 +38,6 @@ Visit [android-sdk-plugin](https://github.com/pfn/android-sdk-plugin) for a more
 In most cases you will be able to open and edit each sub-project (like common, android or desktop), but you still need to use SBT to build the project.
 
 See [here](https://github.com/ajhager/libgdx-sbt-project.g8/wiki/IDE-Plugins) for details about sbt plugins for each editor.
+
+## Fork updates
+This fork bumps version dependancies.
